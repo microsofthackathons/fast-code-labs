@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAST Code Labs</title>
+  </head>
+  <body>
+    <fast-card>
+      <h2>Hello World!</h2>
+      <fast-button appearance="accent">Click Me</fast-button>
+    </fast-card>
+    <style>
+      :not(:defined) {
+        visibility: hidden;
+      }
+
+      fast-card {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h2 {
+        font-size: var(--type-ramp-plus-5-font-size);
+        line-height: var(--type-ramp-plus-5-line-height);
+      }
+
+      fast-card > fast-button {
+        align-self: flex-end;
+      }
+    </style>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
