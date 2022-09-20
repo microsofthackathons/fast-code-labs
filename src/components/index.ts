@@ -1,1 +1,1 @@
-import "./welcome/define.js";
+import "./app/define.js";

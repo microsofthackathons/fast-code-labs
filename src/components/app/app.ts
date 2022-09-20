@@ -5,4 +5,4 @@ import { FASTElement } from "@microsoft/fast-element";
  *
  * @public
  */
- export class Welcome extends FASTElement {}
+ export class FASTCodeLabsApp extends FASTElement {}
