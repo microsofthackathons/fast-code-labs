@@ -1,4 +1,4 @@
 import { designSystem } from "../../design-system.js";
-import { definition } from "./welcome.definition.js";
+import { definition } from "./app.definition.js";
 
 definition.define(designSystem.registry);
