@@ -1,4 +1,4 @@
-import { designSystem } from "../../design-system.js";
+import { designSystem } from "../design-system.js";
 import { template } from "./app.template.js";
 import { styles } from "./app.styles.js";
 import { FASTCodeLabsApp } from "./app.js";
