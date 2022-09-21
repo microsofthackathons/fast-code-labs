@@ -1,7 +1,7 @@
-import { designSystem } from "../../design-system.js";
-import { template } from "./home.template.js";
-import { styles } from "./home.styles.js";
-import { HomeScreen } from "./home.js";
+import { designSystem } from '../../design-system';
+import { template } from './home.template';
+import { styles } from './home.styles';
+import { HomeScreen } from './home';
 
 export const definition = HomeScreen.compose({
   name: `${designSystem.prefix}-home`,

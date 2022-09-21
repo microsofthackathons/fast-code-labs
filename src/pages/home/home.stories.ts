@@ -1,8 +1,8 @@
-import Template from "./fixtures/base.html";
-import "./define.js";
+import Template from './fixtures/base.html';
+import './index.js';
 
 export default {
-  title: "Home Screen",
+  title: 'Home Screen',
 };
 
-export const HomeScreen: () => "*.html" = () => Template;
+export const HomeScreen: () => '*.html' = () => Template;

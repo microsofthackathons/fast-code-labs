@@ -1,8 +1,8 @@
-import { FASTElement } from "@microsoft/fast-element";
+import { FASTElement } from '@microsoft/fast-element';
 
 /**
  * A Custom HTML Element.
  *
  * @public
  */
- export class HomeScreen extends FASTElement {}
+export class HomeScreen extends FASTElement {}

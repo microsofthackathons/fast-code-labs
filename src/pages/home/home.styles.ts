@@ -1,4 +1,4 @@
-import { css, ElementStyles } from "@microsoft/fast-element";
+import { css, ElementStyles } from '@microsoft/fast-element';
 import {
   accessibilityLogo,
   customElementsLogo,
@@ -8,7 +8,8 @@ import {
   performanceLogo,
   pwaLogo,
   webDevLogo,
-} from "../../images/index.js";
+} from '../../images';
+import { mixin_svg_logo } from '../../styles';
 
 /**
  * Styles for FASTCodeLabsApp
@@ -21,7 +22,7 @@ export const styles: ElementStyles = css`
     justify-content: center;
     row-gap: 48px;
     text-align: center;
-    font-family: aktiv-grotesk, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: aktiv-grotesk, 'Segoe UI', Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 20px;
     min-height: 100vh;
@@ -83,62 +84,35 @@ export const styles: ElementStyles = css`
   }
 
   .icon-brand-fast {
-    -webkit-mask: url("${fastTextLogo}") no-repeat 50% 50%;
-    mask: url("${fastTextLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    background-color: #e5e5e5;
+    ${mixin_svg_logo(fastTextLogo)};
   }
 
   .icon-brand {
-    -webkit-mask: url("${fastLogo}") no-repeat 50% 50%;
-    mask: url("${fastLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    background-color: #ff4387;
+    ${mixin_svg_logo(fastLogo, '#ff4387')};
   }
 
   .icon-custom-elements {
-    -webkit-mask: url("${customElementsLogo}") no-repeat 50% 50%;
-    mask: url("${customElementsLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    ${mixin_svg_logo(customElementsLogo)};
   }
 
   .icon-pwa {
-    -webkit-mask: url("${pwaLogo}") no-repeat 50% 50%;
-    mask: url("${pwaLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    ${mixin_svg_logo(pwaLogo)};
   }
 
   .icon-accesibility {
-    -webkit-mask: url("${accessibilityLogo}") no-repeat 50% 50%;
-    mask: url("${accessibilityLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    ${mixin_svg_logo(accessibilityLogo)};
   }
 
   .icon-performance {
-    -webkit-mask: url("${performanceLogo}") no-repeat 50% 50%;
-    mask: url("${performanceLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    ${mixin_svg_logo(performanceLogo)};
   }
 
   .icon-web {
-    -webkit-mask: url("${webDevLogo}") no-repeat 50% 50%;
-    mask: url("${webDevLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    background-color: #e5e5e5;
+    ${mixin_svg_logo(webDevLogo)};
   }
 
   .icon-action {
-    -webkit-mask: url("${linkLogo}") no-repeat 50% 50%;
-    mask: url("${linkLogo}") no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    ${mixin_svg_logo(linkLogo)};
   }
 
   .card-container {
