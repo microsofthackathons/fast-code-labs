@@ -80,6 +80,7 @@ module.exports = {
         ignoreRegExpLiterals: true,
       },
     ],
+    'no-unused-vars': 'off',
     'eol-last': ['error', 'always'],
     'no-await-in-loop': ['error'],
     'require-atomic-updates': ['error'],

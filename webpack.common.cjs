@@ -10,7 +10,7 @@ const outDir = path.resolve(__dirname, './www');
 module.exports = {
   name: 'root',
   entry: {
-    main: path.resolve(appDir, 'app.ts'),
+    app: path.resolve(appDir, 'app.ts'),
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -29,6 +29,7 @@ module.exports = {
             loader: 'ts-loader',
           },
         ],
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,

@@ -1,6 +1,8 @@
-import { NavigationPhase, RouterConfiguration } from '@microsoft/fast-router';
+import { FASTRouter, NavigationPhase, RouterConfiguration } from '@microsoft/fast-router';
 
 import { CodeLabs, HomeScreen } from './pages';
+
+FASTRouter;
 
 type RouteSettings = {
   public?: boolean;

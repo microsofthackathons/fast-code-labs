@@ -1,4 +1,3 @@
-import { css } from '@microsoft/fast-element';
 import { DesignToken } from '@microsoft/fast-foundation';
 
 export const designSystem = Object.freeze({
