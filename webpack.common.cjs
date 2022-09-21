@@ -1,24 +1,24 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ResolveTypeScriptPlugin = require("resolve-typescript-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ResolveTypeScriptPlugin = require('resolve-typescript-plugin');
 
-const appDir = path.resolve(__dirname, "./src");
-const outDir = path.resolve(__dirname, "./www");
+const appDir = path.resolve(__dirname, './src');
+const outDir = path.resolve(__dirname, './www');
 
 module.exports = {
-  name: "root",
+  name: 'root',
   entry: {
-    main: path.resolve(appDir, "index.ts"),
+    main: path.resolve(appDir, 'app.ts'),
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: ['.ts', '.js'],
     plugins: [new ResolveTypeScriptPlugin()],
   },
   output: {
     path: outDir,
-    publicPath: "/",
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -26,7 +26,7 @@ module.exports = {
         test: /.ts$/,
         use: [
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
           },
         ],
       },
@@ -34,10 +34,10 @@ module.exports = {
         test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               limit: 8000, // Convert images < 8kb to base64 strings
-              name: "images/[hash]-[name].[ext]",
+              name: 'images/[hash]-[name].[ext]',
             },
           },
         ],
@@ -46,8 +46,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Welcome to FAST Code Labs!",
-      template: path.resolve(appDir, "index.html"),
+      title: 'Welcome to FAST Code Labs!',
+      template: path.resolve(appDir, 'index.html'),
     }),
   ],
 };

@@ -1,8 +1,8 @@
-import { ElementViewTemplate, html } from "@microsoft/fast-element";
-import type { FASTCodeLabsApp } from "./app.js";
+import { ElementViewTemplate, html } from '@microsoft/fast-element';
+import type { HomeScreen } from './home';
 
-const appTemplate = (): ElementViewTemplate<FASTCodeLabsApp> =>
-  html<FASTCodeLabsApp>`
+const appTemplate = (): ElementViewTemplate<HomeScreen> =>
+  html<HomeScreen>`
     <template>
         <div>
             <header>
@@ -31,7 +31,7 @@ const appTemplate = (): ElementViewTemplate<FASTCodeLabsApp> =>
                             <p>Progressive Web Apps provide a user experience similar to native mobile apps.</p>
                         </div>
                         <div class="action">
-                            <a href="/pwa">
+                            <a href="/code-labs/pwa">
                                 Get Started
                                 <span class="icon icon-action"></span>
                             </a>

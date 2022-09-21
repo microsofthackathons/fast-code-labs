@@ -1,1 +1,3 @@
-import "./app/define.js";
+import { FASTRouter } from '@microsoft/fast-router';
+
+export { FASTRouter };
