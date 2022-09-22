@@ -1,34 +1,85 @@
-import { css, FASTElement, html } from '@microsoft/fast-element';
+import { css, FASTElement, html, observable } from '@microsoft/fast-element';
 import { designSystem } from '../../design-system';
-import { styles_fontFaces } from '../../styles';
-import { CodeLabsRoutes } from './code-labs-routes';
-import '../../components';
 
 class CodeLabs extends FASTElement {
-  routerConfiguration: CodeLabsRoutes = new CodeLabsRoutes();
+  @observable collection!: string;
 }
 
 const template = html<CodeLabs>`
-  <fast-router :config=${x => x.routerConfiguration}></fast-router>
+  <div>
+    <h1 stlye="flex">
+      All code labs in the '${x => x.collection.toUpperCase()}' collection
+    </h1>
+    <div style="display:block">
+      <ul>
+        <li>
+          <a href="/code-labs/${x => x.collection}/about">
+            0 - About Progressive Web Applications (Start Here)
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/promises">
+            0.1 - Promise API Basics
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/fetch-api">
+            0.2 - Fetch API Basics
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/indexed-db">
+            0.3 - IndexedDB Basics
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/app-manifest">
+            1 - Understanding the App Manifest
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/service-workers">
+            2 - Introduction to Service Workers
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/workbox">
+            3 - Service Worker Management with WorkBox
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/service-workers-advanced">
+            4 - Keeping your data synchronized with BackgroundSync API
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/web-push">
+            5 - Web Push Notifications
+          </a>
+        </li>
+        <li>
+          <a href="/code-labs/${x => x.collection}/beyond-pwas">
+            6 - Beyond PWAs
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 `;
 
 const styles = css`
-  ${styles_fontFaces}
-
   :host {
     contain: content;
-  }
-
-  :host,
-  fast-router {
-    display: block;
-    width: 100%;
+    display: flex;
+    align-items: center;
     height: 100%;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
 const definition = CodeLabs.compose({
-  name: `${designSystem.prefix}-labs`,
+  name: `${designSystem.prefix}-dashboard`,
   template,
   styles,
   shadowOptions: {
