@@ -1,6 +1,9 @@
 {
   "name": "fast-code-labs",
   "description": "Code Labs with the FAST library",
+  "sideEffects": [
+    "./src/components/index.ts"
+  ],
   "private": true,
   "type": "module",
   "version": "1.0.0",

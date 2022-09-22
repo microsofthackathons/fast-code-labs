@@ -7,6 +7,7 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'source-map',
   optimization: {
+    usedExports: false,
     splitChunks: {
       chunks: 'all',
       maxInitialRequests: 100,

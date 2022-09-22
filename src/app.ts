@@ -2,6 +2,7 @@ import { css, FASTElement, html } from '@microsoft/fast-element';
 import { designSystem } from './design-system';
 import { styles_fontFaces } from './styles';
 import { AppRouterConfiguration } from './routes';
+import './components';
 
 class FASTCodeLabsApp extends FASTElement {
   routerConfiguration: AppRouterConfiguration = new AppRouterConfiguration();
