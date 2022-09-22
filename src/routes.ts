@@ -23,14 +23,12 @@ export class AppRouterConfiguration extends RouterConfiguration<RouteSettings> {
         path: 'code-labs/{collection}',
         title: 'Code Labs',
         element: CodeLabs,
-        childRouters: false,
       },
       {
         name: 'lab',
         path: 'code-labs/{collection}/{lab}',
         title: 'Code Labs',
         element: CodeLab,
-        childRouters: false,
       }
       // { path: 'not-found', title: 'Not Found', element: HomeScreen }
     );

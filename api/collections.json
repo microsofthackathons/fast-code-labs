@@ -1,0 +1,32 @@
+[
+  {
+    "name": "pwa",
+    "title": "Progressive Web Applications",
+    "description": "Progressive Web Apps provide a user experience similar to native mobile apps.",
+    "icon": "pwa"
+  },
+  {
+    "name": "web-components",
+    "title": "Web Components",
+    "description": "Web Components are custom elements that you can define and reuse in your Web apps.",
+    "icon": "custom-elements"
+  },
+  {
+    "name": "accessibility",
+    "title": "Accessibility",
+    "description": "Enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.",
+    "icon": "accessibility"
+  },
+  {
+    "name": "performance",
+    "title": "Performance",
+    "description": "Making content as available and interactive as possible, as soon as possible.",
+    "icon": "performance"
+  },
+  {
+    "name": "web-tutorials",
+    "title": "Tutorials for Web developers",
+    "description": "Tutorials to take you step-by-step through learning HTML, CSS, JavaScript, and Web APIs.",
+    "icon": "web"
+  }
+]

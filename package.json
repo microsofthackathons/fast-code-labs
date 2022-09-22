@@ -36,6 +36,7 @@
     "undefined": "^0.1.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "@microsoft/fast-cli": "^1.0.0-alpha.5",
     "@playwright/test": "^1.21.0",
     "@storybook/builder-webpack5": "6.5.9",

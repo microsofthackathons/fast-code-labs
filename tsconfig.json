@@ -23,10 +23,9 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ES2015",
-    "types": ["node"],
     "typeRoots": [
       "node_modules/@types",
-      "node_modules/@microsoft/fast-element/dist/dts"
+      "node_modules/@microsoft/fast-element/**"
     ]
   },
   "include": ["src"]

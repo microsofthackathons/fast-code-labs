@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ResolveTypeScriptPlugin = require('resolve-typescript-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const appDir = path.resolve(__dirname, './src');
 const outDir = path.resolve(__dirname, './www');
@@ -47,6 +48,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'api', to: 'api' }],
+    }),
     new HtmlWebpackPlugin({
       title: 'Welcome to FAST Code Labs!',
       template: path.resolve(appDir, 'index.html'),
