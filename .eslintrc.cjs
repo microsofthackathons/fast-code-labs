@@ -13,7 +13,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  ignorePatterns: ['**/dist/**'],
+  ignorePatterns: ['**/dist/**', '**/*.cjs'],
   rules: {
     '@typescript-eslint/no-empty-interface': [
       'error',
