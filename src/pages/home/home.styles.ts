@@ -99,7 +99,7 @@ export const styles: ElementStyles = css`
     ${mixin_svg_logo(pwaLogo)};
   }
 
-  .icon-accesibility {
+  .icon-accessibility {
     ${mixin_svg_logo(accessibilityLogo)};
   }
 
