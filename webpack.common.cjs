@@ -19,6 +19,7 @@ module.exports = {
   output: {
     path: outDir,
     publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
