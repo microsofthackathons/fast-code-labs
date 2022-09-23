@@ -1,0 +1,82 @@
+[
+  {
+    "name": "about",
+    "title": "0 - About Progressive Web Applications (Start Here)",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190129",
+    "duration": 0
+  },
+  {
+    "name": "promises",
+    "title": "0.1 - Promise API Basics",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190124",
+    "duration": 30
+  },
+  {
+    "name": "fetch-api",
+    "title": "0.2 - Fetch API Basics",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190124",
+    "duration": 30
+  },
+  {
+    "name": "indexed-db",
+    "title": "0.3 - IndexedDB Basics",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190122",
+    "duration": 30
+  },
+  {
+    "name": "app-manifest",
+    "title": "1 - Understanding the App Manifest",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190129",
+    "duration": 40
+  },
+  {
+    "name": "service-workers",
+    "title": "2 - Introduction to Service Workers",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190127",
+    "duration": 70
+  },
+  {
+    "name": "workbox",
+    "title": "3 - Service Worker Management with WorkBox",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190127",
+    "duration": 30
+  },
+  {
+    "name": "service-workers-advanced",
+    "title": "4 - Keeping your data synchronized with BackgroundSync API",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190129",
+    "duration": 50
+  },
+  {
+    "name": "web-push",
+    "title": "5 - Web Push Notifications",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190302",
+    "duration": 60
+  },
+  {
+    "name": "beyond-pwas",
+    "title": "6 - Beyond PWAs",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20190303",
+    "duration": 60
+  }
+]

@@ -1,3 +1,7 @@
-import CodeLabs from './code-labs';
+import { designSystem } from '../../design-system';
+import { definition } from './code-labs.definition';
+import { CodeLabsScreen } from './code-labs';
 
-export default CodeLabs;
+definition.define(designSystem.registry);
+
+export default CodeLabsScreen;

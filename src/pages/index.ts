@@ -1,5 +1,5 @@
 import HomeScreen from './home';
-import CodeLabs from './code-labs';
-import CodeLab from './code-lab';
+import CodeLabsScreen from './code-labs';
+import CodeLabScreen from './code-lab';
 
-export { CodeLabs, CodeLab, HomeScreen };
+export { CodeLabsScreen, CodeLabScreen, HomeScreen };

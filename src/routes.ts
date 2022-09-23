@@ -2,7 +2,7 @@ import { NavigationPhase, RouterConfiguration } from '@microsoft/fast-router';
 import { Constructable } from '@microsoft/fast-element';
 import { Container, inject } from '@microsoft/fast-element/di';
 
-import { CodeLab, CodeLabs, HomeScreen } from './pages';
+import { CodeLabScreen, CodeLabsScreen, HomeScreen } from './pages';
 
 type RouteSettings = {
   public?: boolean;
@@ -20,15 +20,15 @@ export class AppRouterConfiguration extends RouterConfiguration<RouteSettings> {
       { name: 'home', path: 'code-labs', element: HomeScreen, title: 'Home' },
       {
         name: 'codeLabs',
-        path: 'code-labs/{collection}',
+        path: 'code-labs/{collectionName}',
         title: 'Code Labs',
-        element: CodeLabs,
+        element: CodeLabsScreen,
       },
       {
         name: 'lab',
-        path: 'code-labs/{collection}/{lab}',
+        path: 'code-labs/{collectionName}/{labName}',
         title: 'Code Labs',
-        element: CodeLab,
+        element: CodeLabScreen,
       }
       // { path: 'not-found', title: 'Not Found', element: HomeScreen }
     );

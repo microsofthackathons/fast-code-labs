@@ -2,7 +2,7 @@ import { ElementViewTemplate, html, repeat } from '@microsoft/fast-element';
 import { Collection } from '../../services/code-labs.service';
 import type { HomeScreen } from './home';
 
-const appTemplate = (): ElementViewTemplate<HomeScreen> =>
+const homeTemplate = (): ElementViewTemplate<HomeScreen> =>
   html<HomeScreen>`
     <template>
         <div>
@@ -52,4 +52,4 @@ const appTemplate = (): ElementViewTemplate<HomeScreen> =>
     </template>
 `;
 
-export const template = appTemplate();
+export const template = homeTemplate();
