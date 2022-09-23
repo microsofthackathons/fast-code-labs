@@ -1,3 +1,5 @@
 import { FASTRouter } from '@microsoft/fast-router';
+import { FASTCard } from '@microsoft/fast-foundation';
+import CodeLabsCollectionCard from './collection-card';
 
-export { FASTRouter };
+export { CodeLabsCollectionCard, FASTCard, FASTRouter };

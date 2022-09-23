@@ -1,6 +1,7 @@
 import { ElementViewTemplate, html, repeat } from '@microsoft/fast-element';
 import { Collection } from '../../services/code-labs.service';
 import type { HomeScreen } from './home';
+import '../../components';
 
 const homeTemplate = (): ElementViewTemplate<HomeScreen> =>
   html<HomeScreen>`
@@ -26,21 +27,12 @@ const homeTemplate = (): ElementViewTemplate<HomeScreen> =>
                     ${repeat(
                       x => x.collections,
                       html<Collection>`
-                        <div class="card">
-                          <div class="image small">
-                            <span class="icon icon-${x => x.icon}"></span>
-                          </div>
-                          <div class="content">
-                            <h3>${x => x.title}</h3>
-                            <p>${x => x.description}</p>
-                          </div>
-                          <div class="action">
-                            <a href="/code-labs/${x => x.name}">
-                              Get Started
-                              <span class="icon icon-action"></span>
-                            </a>
-                          </div>
-                        </div>
+                        <fast-codelabs-collection-card
+                          name="${x => x.name}"
+                          icon="${x => x.icon}"
+                          title="${x => x.title}"
+                          description="${x => x.description}"
+                        ></fast-codelabs-collection-card>
                       `
                     )}
                 </div>
