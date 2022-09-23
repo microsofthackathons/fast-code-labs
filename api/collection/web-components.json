@@ -1,0 +1,26 @@
+[
+  {
+    "name": "simple-card-component",
+    "title": "Create a simple card component and extend it",
+    "description": "",
+    "authors": ["Frederik De Man", "Gerjan van Geest"],
+    "lastUpdated": "20171029",
+    "duration": 40
+  },
+  {
+    "name": "web-components-basics",
+    "title": "Discover the basics of web components by building a random greeter component",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "20171029",
+    "duration": 40
+  },
+  {
+    "name": "polymer-lego-for-the-web",
+    "title": "Polymer - Lego for the Web",
+    "description": "",
+    "authors": ["Radu Enuca"],
+    "lastUpdated": "201710625",
+    "duration": 60
+  }
+]

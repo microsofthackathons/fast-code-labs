@@ -11,7 +11,7 @@ class HttpImpl implements Http {
   constructor(@Serializer private serializer: Serializer) {}
 
   async post<T>(url: string, request: any): Promise<T> {
-    const response = await fetch(`api/${url}.json`, {
+    const response = await fetch(`/api/${url}.json`, {
       method: 'GET',
     });
 
@@ -19,7 +19,7 @@ class HttpImpl implements Http {
   }
 
   async get<T>(url: string): Promise<T> {
-    const response = await fetch(`api/${url}.json`, {
+    const response = await fetch(`/api/${url}.json`, {
       method: 'GET',
     });
 

@@ -1,16 +1,16 @@
 import { css, FASTElement, html, observable } from '@microsoft/fast-element';
 import { designSystem } from '../../design-system';
 
-class CodeLab extends FASTElement {
-  @observable collection!: string;
-  @observable lab!: string;
+class CodeLabScreen extends FASTElement {
+  @observable collectionName!: string;
+  @observable labName!: string;
 }
 
-const template = html<CodeLab>`
+const template = html<CodeLabScreen>`
   <h1>
-    ${x => x.lab} lab inside the
-    <a href="/code-labs/${x => x.collection}"
-      >'${x => x.collection.toUpperCase()}'</a
+    ${x => x.labName} lab inside the
+    <a href="/code-labs/${x => x.collectionName}"
+      >'${x => x.collectionName.toUpperCase()}'</a
     >
     collection
   </h1>
@@ -27,7 +27,7 @@ const styles = css`
   }
 `;
 
-const definition = CodeLab.compose({
+const definition = CodeLabScreen.compose({
   name: `${designSystem.prefix}-lab`,
   template,
   styles,
@@ -39,4 +39,4 @@ const definition = CodeLab.compose({
 
 definition.define(designSystem.registry);
 
-export default CodeLab;
+export default CodeLabScreen;
