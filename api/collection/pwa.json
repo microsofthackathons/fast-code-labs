@@ -1,81 +1,91 @@
 [
   {
     "name": "about",
-    "title": "0 - About Progressive Web Applications (Start Here)",
-    "description": "",
+    "title": "0 - About",
+    "description": "About Progressive Web Applications (Start Here)",
     "authors": ["Radu Enuca"],
+    "categories": [],
     "lastUpdated": "20190129",
     "duration": 0
   },
   {
     "name": "promises",
     "title": "0.1 - Promise API Basics",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190124",
     "duration": 30
   },
   {
     "name": "fetch-api",
     "title": "0.2 - Fetch API Basics",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190124",
     "duration": 30
   },
   {
     "name": "indexed-db",
     "title": "0.3 - IndexedDB Basics",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190122",
     "duration": 30
   },
   {
     "name": "app-manifest",
-    "title": "1 - Understanding the App Manifest",
-    "description": "",
+    "title": "1 - The App Manifest",
+    "description": "Understanding the App Manifestuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["HTML"],
     "lastUpdated": "20190129",
     "duration": 40
   },
   {
     "name": "service-workers",
-    "title": "2 - Introduction to Service Workers",
-    "description": "",
+    "title": "2 - Service Workers",
+    "description": "Introduction to Service Workers, irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190127",
     "duration": 70
   },
   {
     "name": "workbox",
-    "title": "3 - Service Worker Management with WorkBox",
-    "description": "",
+    "title": "3 - WorkBox",
+    "description": "Service Worker Management with Worbox in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190127",
     "duration": 30
   },
   {
     "name": "service-workers-advanced",
-    "title": "4 - Keeping your data synchronized with BackgroundSync API",
-    "description": "",
+    "title": "4 - BackgroundSync API",
+    "description": "Keeping your data synchronized with BackgroundSync API in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190129",
     "duration": 50
   },
   {
     "name": "web-push",
     "title": "5 - Web Push Notifications",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190302",
     "duration": 60
   },
   {
     "name": "beyond-pwas",
     "title": "6 - Beyond PWAs",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20190303",
     "duration": 60
   }

@@ -32,6 +32,7 @@ const homeTemplate = (): ElementViewTemplate<HomeScreen> =>
                           icon="${x => x.icon}"
                           title="${x => x.title}"
                           description="${x => x.description}"
+                          ?disabled=${x=>!x.active}
                         ></fast-codelabs-collection-card>
                       `
                     )}

@@ -133,6 +133,7 @@ export const styles: ElementStyles = css`
 
   .card a.disabled {
     background: #666666;
+    pointer-events: none;
   }
 
   a {

@@ -5,4 +5,9 @@ declare module '*.svg' {
   export default value;
 }
 
+declare module '*.png' {
+  const value: any;
+  export default value;
+}
+
 declare module '@microsoft/fast-element/di';

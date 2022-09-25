@@ -8,7 +8,7 @@ export const definition = CodeLabsCollectionCard.compose({
   template,
   styles,
   shadowOptions: {
-    mode: designSystem.shadowRootMode,
+    mode: 'closed', //designSystem.shadowRootMode,
     delegatesFocus: true,
   },
 });
