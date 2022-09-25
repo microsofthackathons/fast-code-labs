@@ -1,0 +1,42 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 5
+  },
+  {
+    "number": 3,
+    "title": "Introducing Custom Elements",
+    "duration": 5
+  },
+  {
+    "number": 4,
+    "title": "Creating HTML Templates with Lit-HTML",
+    "duration": 5
+  },
+  {
+    "number": 5,
+    "title": "Rendering and styling",
+    "duration": 5
+  },
+  {
+    "number": 6,
+    "title": "Extending simple-card",
+    "duration": 8
+  },
+  {
+    "number": 7,
+    "title": "Create custom footer",
+    "duration": 10
+  },
+  {
+    "number": 8,
+    "title": "Summary",
+    "duration": 1
+  }
+]

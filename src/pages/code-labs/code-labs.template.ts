@@ -24,8 +24,8 @@ const codeLabTemplate = html<CodeLab, CodeLabScreen>`
   ></fast-codelabs-lab-card>
 `;
 
-const codeLabsTemplate = (): ElementViewTemplate<CodeLabsScreen> => {
-  return html<CodeLabsScreen>`
+const codeLabsTemplate = (): ElementViewTemplate<CodeLabsScreen> =>
+  html<CodeLabsScreen>`
       <template>
         <header>
             <h1>
@@ -66,6 +66,5 @@ const codeLabsTemplate = (): ElementViewTemplate<CodeLabsScreen> => {
         <footer>
     </template>
   `;
-};
 
 export const template = codeLabsTemplate();
