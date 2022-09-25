@@ -15,6 +15,10 @@ import htmlLogo from './html5.svg';
 import cssLogo from './css3.svg';
 import timerIcon from './timer.svg';
 import calendarIcon from './calendar.svg';
+import arrowLeftIcon from './arrow-left.svg';
+import leftIcon from './left.svg';
+import rightIcon from './right.svg';
+import checkIcon from './check.svg';
 
 export {
   accessibilityLogo,
@@ -34,4 +38,8 @@ export {
   cssLogo,
   timerIcon,
   calendarIcon,
+  arrowLeftIcon,
+  leftIcon,
+  rightIcon,
+  checkIcon,
 };
