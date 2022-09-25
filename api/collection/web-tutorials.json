@@ -2,32 +2,36 @@
   {
     "name": "gulp-introduction",
     "title": "Gulp Introduction",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "authors": ["Radu Enuca"],
+    "categories": ["Java Script"],
     "lastUpdated": "20170411",
     "duration": 120
   },
   {
     "name": "front-end-foundations",
     "title": "Front-end Foundations",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     "authors": ["Radu Enuca"],
+    "categories": ["HTML", "CSS", "Java Script"],
     "lastUpdated": "20170328",
     "duration": 120
   },
   {
     "name": "css-grid",
     "title": "Introduction to CSS Grid",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     "authors": ["Ovidiu Olea"],
+    "categories": ["CSS"],
     "lastUpdated": "20180401",
     "duration": 35
   },
   {
     "name": "form-validation",
     "title": "Form Validation",
-    "description": "",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     "authors": ["Raluca Lupu"],
+    "categories": ["HTML", "Java Script"],
     "lastUpdated": "20170501",
     "duration": 35
   }

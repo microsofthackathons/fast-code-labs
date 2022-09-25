@@ -6,14 +6,16 @@ export interface Collection {
   title: string;
   description: string;
   icon: string;
+  active: boolean;
 }
 
 export interface CodeLab {
   name: string;
   title: string;
-  desription: string;
+  description: string;
   authors: string[];
-  lastUpdate: string;
+  categories: string[];
+  lastUpdated: string;
   duration: number;
 }
 

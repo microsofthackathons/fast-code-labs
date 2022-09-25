@@ -1,5 +1,8 @@
 import { css, FASTElement, html, observable } from '@microsoft/fast-element';
-import { Container, inject /*, Registration */ } from '@microsoft/fast-element/di';
+import {
+  Container,
+  inject /*, Registration */,
+} from '@microsoft/fast-element/di';
 // import { DefaultRouteRecognizer } from '@microsoft/fast-router';
 import { designSystem } from './design-system';
 import { styles_fontFaces } from './styles';
@@ -43,6 +46,7 @@ const styles = css`
 
   :host {
     contain: content;
+    background: rgb(24, 24, 24);
   }
 
   :host,
