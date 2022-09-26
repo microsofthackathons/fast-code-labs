@@ -67,7 +67,7 @@ const codeLabTemplate = (): ElementViewTemplate<CodeLabScreen> =>
                   step.number === ctx.parent.currentStepNumber ? 'lab-step-selected' : ''} ${(step, ctx) =>
                   ctx.parent.getStepAnimationClass(step.number)}"
               >
-                <h2>${step => step.number}. ${step => step.title}</h2>
+                <h2 class="title">${step => step.number}. ${step => step.title}</h2>
                 <!-- <div :innerHTML=></div>
                 ${(step, ctx) => ctx.parent.loadStepPage(step.number)} -->
               </div>

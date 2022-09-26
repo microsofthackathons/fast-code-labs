@@ -2,8 +2,10 @@ import { css, ElementStyles } from '@microsoft/fast-element';
 import { arrowLeftIcon, checkIcon, leftIcon, rightIcon, timerIcon } from '../../images';
 import { mixin_svg_logo } from '../../styles';
 import { styles as syntax_styles } from './syntax.styles';
+import { styles as step_styles } from './step.styles';
 
 export const styles: ElementStyles = css`
+  ${step_styles}
   ${syntax_styles}
   :host {
     --lab-transition: height 2s;
