@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "checkJs": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "dist/dts",
@@ -23,10 +24,7 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ES2015",
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@microsoft/fast-element/**"
-    ]
+    "typeRoots": ["node_modules/@types", "node_modules/@microsoft/fast-element/**"]
   },
   "include": ["src"]
 }

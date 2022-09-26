@@ -1,0 +1,157 @@
+                      <h2><strong>Project Set Up</strong></h2>
+                <p>
+                  Fire up a code editor, and create five files <code>simple-card.html</code>,
+                  <code>simple-card.js</code>, <code>demo/index.html</code>,
+                  <code>bower.json</code> and a <code>package.json</code>.
+                </p>
+
+                <h3>simple-card.html</h3>
+
+                <pre>
+<code class="prettyprint">
+&lt;link rel="import" href="../bbconf2017-lithtml/bbconf2017-lit-element.html"&gt;
+&lt;script src="simple-card.js"&gt;&lt;/script&gt;
+
+</code></pre>
+                <h3>simple-card.js</h3>
+
+                <pre>
+<code>
+class SimpleCard extends HTMLElement {
+    connectedCallback() {
+        console.log('simple-card element added to the DOM!');
+      }
+    }
+customElements.define('simple-card',SimpleCard);
+
+</code></pre>
+              <h3>demo/index.html</h3>
+
+              <pre>
+<code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;Simple card component&lt;/title&gt;
+
+        &lt;style&gt;
+          body {
+            width: 90%;
+            max-width: 980px;
+            background-color: #f5f5f5;
+            margin: 0 auto 32px;
+          }
+        &lt;/style&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Example page of the simple-card&lt;/h1&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+              <h3>package.json</h3>
+
+              <pre>
+<code>
+{
+  "name": "simple-card",
+  "version": "0.0.1",
+  "description": "",
+  "main": "simple-card.html",
+  "devDependencies": {
+    "polyserve": "0.23.0"
+  },
+  "scripts": {
+    "start": "polyserve -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/The-Guide/bbconf2017-simple-card-component.git"
+  },
+  "engines": {
+    "node": ">=6.0"
+  }
+}
+</code></pre>
+
+              <h3>bower.json</h3>
+
+              <pre>
+<code>
+{
+  "name": "simple-card",
+  "main": "simple-card.html",
+  "dependencies": {
+    "bbconf2017-lithtml": "https://github.com/The-Guide/bbconf2017-lithtml.git"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}
+</code></pre>
+                <p>
+                  Install the needed dependencies as follows:
+                  <ul>
+                    <li>Run <code>npm install</code> to install the node dependencies.</li>
+                    <li>Run <code>bower install</code> to install the bower dependencies.</li>
+                  </ul>
+                </p>
+
+                <h3>Using the <code>simple-card</code> component</h3>
+
+                <p>To employ <code>&lt;simple-card&gt;</code>, you need to:</p>
+
+                <ol type="1" start="1">
+                    <li>Use an <a href="http://www.html5rocks.com/en/tutorials/webcomponents/imports/" target="_blank">HTML
+                        Import</a> to load it in <code>demo/index.html</code>.
+                    </li>
+                    <li>Declare an instance of the element inside the <code>body</code>.</li>
+                </ol>
+
+                <pre>
+<code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,minimum-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title>Simple-card-component&lt;/title&gt;
+        &lt;link rel="import" href="../simple-card.html"&gt;
+
+        &lt;style&gt;
+          body {
+            width: 90%;
+            max-width: 980px;
+            background-color: #f5f5f5;
+            margin: 0 auto 32px;
+          }
+        &lt;/style&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Example page of the simple-card&lt;/h1&gt;
+      &lt;h2&gt;An basic example&lt;/h2&gt;
+
+      &lt;simple-card&gt;&lt;/simple-card&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                <h3>Preview the component</h3>
+
+                <p>
+                  Run <code>npm start</code> to run your component in the browser.
+                  Just open the <code>demo/index.html</code> page in the browser, open the developer tools a look at the
+                  <code>Console</code> tab where you should see:
+
+                  <div style="padding: 10px; text-align: center; background-color: #f5f5f5;">
+                    "simple-card element added to the DOM!"
+                  </div>
+                </p>
+

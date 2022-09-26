@@ -1,8 +1,10 @@
 import { css, ElementStyles } from '@microsoft/fast-element';
 import { arrowLeftIcon, checkIcon, leftIcon, rightIcon, timerIcon } from '../../images';
 import { mixin_svg_logo } from '../../styles';
+import { styles as syntax_styles } from './syntax.styles';
 
 export const styles: ElementStyles = css`
+  ${syntax_styles}
   :host {
     --lab-transition: height 2s;
     --lab-background: #424242;
@@ -361,7 +363,7 @@ export const styles: ElementStyles = css`
     transform: scale(0);
   }
 
-  .step-content {
+  .lab-content {
     background-color: #2b2b2b;
     padding: 24px;
     line-height: 24px;
@@ -369,6 +371,104 @@ export const styles: ElementStyles = css`
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .lab-step-container {
+  }
+
+  .lab-step:not(.lab-step-selected):not(.lab-step-animating) {
+    display: none;
+    overflow: hidden;
+    line-height: 24px;
+  }
+
+  .lab-step-selected {
+    display: block;
+  }
+
+  /* animation sets */
+
+  /* move from / to  */
+
+  .lab-step-to-left {
+    -webkit-animation: moveToLeft 0.6s ease both;
+    animation: moveToLeft 0.6s ease both;
+  }
+
+  .lab-step-from-left {
+    -webkit-animation: moveFromLeft 0.6s ease both;
+    animation: moveFromLeft 0.6s ease both;
+  }
+
+  .lab-step-to-right {
+    -webkit-animation: moveToRight 0.6s ease both;
+    animation: moveToRight 0.6s ease both;
+  }
+
+  .lab-step-from-right {
+    -webkit-animation: moveFromRight 0.6s ease both;
+    animation: moveFromRight 0.6s ease both;
+  }
+
+  /********************************* keyframes **************************************/
+
+  /* move from / to  */
+
+  @-webkit-keyframes moveToLeft {
+    from {
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+  @keyframes moveToLeft {
+    from {
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes moveFromLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+  @keyframes moveFromLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes moveToRight {
+    from {
+    }
+    to {
+      -webkit-transform: translateX(100%);
+    }
+  }
+  @keyframes moveToRight {
+    from {
+    }
+    to {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+
+  @-webkit-keyframes moveFromRight {
+    from {
+      -webkit-transform: translateX(100%);
+    }
+  }
+  @keyframes moveFromRight {
+    from {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
   }
 
   @media (min-width: 641px) {

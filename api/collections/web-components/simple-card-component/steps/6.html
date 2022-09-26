@@ -1,0 +1,119 @@
+                <h2><strong>Extending</strong></h2>
+
+                <p>
+                  We have a very simple card component. It has some very generic features. Imagine that we
+                  want a specific card with a custom footer. How can we create that from the simple-card?
+                  It is easy, we can <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends" target="_blank">extend</a> the simple card.
+                </p>
+
+                <p>
+                  We are now creating a new component, the extended-card. Create <code>extended-card.html</code> and <code>extended-card.js</code>.
+                </p>
+                <h3>extended-card.html</h3>
+
+                <pre>
+<code>
+&lt;link rel="import" href="../simple-card/simple-card.html"&gt;
+&lt;script src="extended-card.js"&gt;&lt;/script&gt;
+</code></pre>
+              <h3>extended-card.js</h3>
+              <pre>
+<code>
+class ExtendedCard extends SimpleCard {
+ }
+
+customElements.define('extended-card', ExtendedCard);
+</code></pre>
+                <aside class="note">
+                  <p>
+                    Also create a <code>package.json</code> and a <code>bower.json</code> just like
+                    we did in the <code>simple-card</code>, and install all dependencies. This time
+                    we can use the
+                    <a href="https://github.com/The-Guide/bbconf2017-simple-card-component.git">
+                      <code>simple-card</code>
+                    </a> as a bower dependency.
+                  </p>
+                </aside>
+                <p>
+                  First, we want to extend some of the styling of the simple-card:
+                  <ul>
+                    <li>Change the heading text to orangered</li>
+                    <li>increase the fontsize</li>
+                    <li>Make use of the Roboto font</li>
+                  </ul>
+                  We want to keep all the rest of the styling from <code>simple-card</code>.
+                </p>
+
+              <h3>extended-card.js</h3>
+<pre>
+<code>
+  class ExtendedCard extends SimpleCard {
+    get styleTemplate() {
+      return html`
+        ${super.styleTemplate}
+        &lt;style&gt;
+          :host {
+            font-family: Roboto;
+          }
+
+          #header {
+            color: orangered;
+            font-size: 1.4em;
+          }
+        &lt;/style&gt;
+      `;
+    }
+  }
+
+  customElements.define('extended-card', ExtendedCard);
+</code></pre>
+
+                <p>
+                  Create a <code>demo/index.html</code> to view the component, just like we did in
+                  the <code>simple-dialog</code>.
+                </p>
+
+                <h3>demo/index.html</h3>
+                <pre>
+<code>
+&lt;!doctype html&gt;
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"&gt;
+  &lt;title&gt;Extended-card Demo&lt;/title&gt;
+
+  &lt;link rel="import" href="../extended-card.html"&gt;
+
+   &lt;style&gt;
+    body {
+      width: 90%;
+      max-width: 980px;
+      background-color: #f5f5f5;
+      margin: 0 auto 32px;
+    }
+   &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Example page of the extended-card&lt;/h1&gt;
+
+  &lt;h2&gt;An basic example&lt;/h2&gt;
+
+  &lt;extended-card last-updated="6"&gt;
+    &lt;h3 slot="header"&gt;Title&lt;/h3&gt;
+    &lt;div&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius quam quam. Praesent gravida urna id
+      nunc luctus, nec varius tortor tristique. Mauris non sem vel magna consectetur sodales. Aenean ut urna
+      sodales, auctor elit condimentum, cursus neque. Sed quam mauris, ultricies ac congue ut, volutpat
+      volutpat dui. Quisque sagittis diam et justo fringilla condimentum. Cras ut dignissim dolor, nec
+      efficitur mi. Praesent vitae consectetur odio. Donec lectus nulla, tristique eget lacinia consequat,
+      porttitor in arcu. Fusce mattis nec leo nec vulputate. In hac habitasse platea dictumst.
+    &lt;/div&gt;
+  &lt;/extended-card&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

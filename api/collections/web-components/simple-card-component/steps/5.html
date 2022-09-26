@@ -1,0 +1,124 @@
+              <h2>Render the templates</h2>
+
+              <p>
+                Out lit-element provides a <code>render()</code> to render the templates. Let's add them in the component.
+              </p>
+              <pre>
+<code>
+class SimpleCard extends Bbconf2017LitElement {
+  get headerTemplate() {
+    return html`
+      &lt;header id="header"&gt;
+        &lt;slot name="header" id="headerslot"&gt;&lt;/slot&gt;
+      &lt;/header&gt;
+  `;
+  }
+  get bodyTemplate() {
+    return html`
+      &lt;div id="body"&gt;
+        &lt;slot id="bodyslot"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+  `;
+  }
+  get footerTemplate() {
+    return html`
+      &lt;footer id="footer"&gt;
+        &lt;slot name="footer" id="footerslot"&gt;&lt;/slot&gt;
+      &lt;/footer&gt;
+  `;
+  }
+  render() {
+    return html`
+      ${this.headerTemplate}
+      ${this.bodyTemplate}
+      ${this.footerTemplate}
+    `;
+  }
+}
+
+// Register custom element definition using standard platform API
+customElements.define('simple-card', SimpleCard);
+</code></pre>
+
+                <h2>Styling template</h2>
+
+                <p>
+                  Our card shows the content but is still unstyled. Let's add some styling. In your <code>simple-card</code>
+                  add a styling template the same way you created the other templates.
+                  It should contain a style tag and some basic styling on the <code>:host</code> element.
+
+                <pre>
+<code>
+class SimpleCard extends Bbconf2017LitElement {
+ get styleTemplate() {
+    return html`
+     &lt;style&gt;
+        :host {
+          width: 100%;
+          position: relative;
+          display: block;
+          background: #ffffff;
+          border-radius: 4px;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                      0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                      0 3px 1px -2px rgba(0, 0, 0, 0.2);
+          box-sizing: border-box;
+          line-height: 1.5;
+          font-weight: normal;
+        }
+      &lt;/style&gt;
+    `;
+  }
+
+ ...
+
+  render() {
+    return html`
+      ${this.styleTemplate}
+      ${this.headerTemplate}
+      ${this.bodyTemplate}
+      ${this.footerTemplate}
+    `;
+  }
+}
+
+// Register custom element definition using standard platform API
+customElements.define('simple-card', SimpleCard);
+</code></pre>
+
+                <p>
+                    Add now some styling on the header, body and footer:
+                </p>
+<pre><code>
+get styleTemplate() {
+ return html`
+     &lt;style&gt;
+
+    ...
+
+    #header ::slotted(*),
+    #body ::slotted(*),
+    #footer ::slotted(*) {
+      padding: 24px 24px;
+    }
+    #header {
+      color: inherit;
+    }
+    #header ::slotted(h1),
+    #header ::slotted(h2),
+    #header ::slotted(h3),
+    #header ::slotted(h4),
+    #header ::slotted(h5),
+    #header ::slotted(h6) {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    ...
+
+  &lt;/style&gt;
+`;
+</code></pre>
+              <p>
+                Check the differences in the browser.
+              </p>

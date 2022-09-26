@@ -1,0 +1,137 @@
+                <h2><strong>Create a custom footer</strong></h2>
+
+                <p>
+                  This card element we are creating should have a fixed footer like <a href="https://v4-alpha.getbootstrap.com/components/card/#header-and-footer" target="_blank">this (scroll down to the footer example)</a> bootstrapped card footer.
+                  The background color should be light orange and the text should be centered. Please create a new <code>footerTemplate</code> with the text "Last updated 5 minutes ago" and add styles too. Please add this styles:
+                <pre>
+<code>
+  #footer {
+    border-top: 1px solid #d5d5d5;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #ffeedd;
+    font-size: 1em;
+    text-align: center;
+    color: grey;
+    padding: 4px 24px;
+  }
+</code>
+            </pre>
+                <p>And add the following template:</p>
+                <pre>
+<code>
+  get footerTemplate() {
+    return html`
+    &lt;footer id="footer"&gt;
+      Last updated 5 mins ago.
+    &lt;/footer&gt;
+    `;}
+  }
+</code></pre>
+              <p>Now we see fancy footers with the info that it is updated 5 minutes ago. But of course it would be nice to set this dynamically.</p>
+
+              <h2>Update the footer dynamically</h2>
+
+              <p>First of all we need a property list with one property <code>lastUpdated</code>, which we can add to the <code>extended-card</code></p>
+              <pre>
+<code>
+static get properties() {
+  return {
+    lastUpdated: {
+      type: String,
+      value: '',
+      reflectToAttribute: 'last-updated',
+    }
+  };
+}
+</code>
+              </pre>
+
+              <aside class="note">
+                <p>Be aware that we created a new property list. If the simple-card had a property-list we would override it. If you want to extend use it like this:
+                  <pre>
+<code>
+  return Object.assign(super.properties, {
+    myNewProperty: {
+      type: String,
+      value: 'default'
+    }
+  });
+</code>
+                  </pre>
+                </p>
+              </aside>
+
+              <p>The next step is to make use of this property, so we change our <code>footerTemplate</code> with the following codesnippet:</p>
+
+              <pre>
+<code>
+  get footerTemplate() {
+   return html`
+   &lt;footer id="footer"&gt;
+    Last updated ${this.lastUpdated} mins ago.
+   &lt;/footer&gt;
+   `;}
+  }
+</code>
+              </pre>
+
+              <p>And of course we need to add this feature to the <code>demo/index.html</code>.</p>
+
+              <pre>
+<code>
+  &lt;extended-card last-updated="6"&gt;
+    ...
+  &lt;/extended-card&gt;
+</code>
+              </pre>
+
+              <h2>Create a fallback</h2>
+              <p>
+                We also need a fallback if no <code>lastUpdated</code> attribute is set. First we
+                create a second <code>extended-card</code> in our <code>demo/index.html</code> file.
+              </p>
+
+              <pre>
+<code>
+  &lt;h2&gt;An example without last-updated time stamp&lt;/h2&gt;
+  &lt;extended-card&gt;
+    &lt;p&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius quam quam. Praesent
+      gravida urna id nunc luctus, nec varius tortor tristique. Mauris non sem vel magna consectetur
+      sodales. Aenean ut urna sodales, auctor elit condimentum, cursus neque. Sed quam mauris,
+      ultricies ac congue ut, volutpat  volutpat dui. Quisque sagittis diam et justo fringilla
+      condimentum. Cras ut dignissim dolor, nec efficitur mi. Praesent vitae consectetur odio.
+      Donec lectus nulla, tristique eget lacinia consequat, porttitor in arcu. Fusce mattis nec leo
+      nec vulputate. In hac habitasse platea dictumst.
+    &lt;/p&gt;
+  &lt;/extended-card&gt;
+</code>
+              </pre>
+
+              <p>This will give a wrong message without a time.</p>
+
+              <p>We need to create a backup message if no last-updated time is provided.</p>
+
+              <pre>
+<code>
+  get footerTemplate() {
+    if (this.lastUpdated) {
+    return html`
+    &lt;footer id="footer"&gt;
+      Last updated ${this.lastUpdated} mins ago.
+    &lt;/footer&gt;
+    `;}
+    else {
+      return html`
+      &lt;footer id="footer"&gt;
+      Not updated recently!
+      &lt;/footer&gt;
+      `;
+    }
+  }
+</code>
+              </pre>
+
+              <p>Check the demo again to see the second <code>extended-card</code> be rendered correctly.</p>
+

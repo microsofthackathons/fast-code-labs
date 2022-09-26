@@ -11,3 +11,5 @@ declare module '*.png' {
 }
 
 declare module '@microsoft/fast-element/di';
+
+declare module '../../node_modules/code-prettify/src/prettify.js';
