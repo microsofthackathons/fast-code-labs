@@ -1,0 +1,47 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 2
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 1
+  },
+  {
+    "number": 3,
+    "title": "fetch vs XMLHttpRequest",
+    "duration": 7
+  },
+  {
+    "number": 4,
+    "title": "Response Object",
+    "duration": 5
+  },
+  {
+    "number": 5,
+    "title": "Request Object",
+    "duration": 5
+  },
+  {
+    "number": 6,
+    "title": "POST Requests",
+    "duration": 3
+  },
+  {
+    "number": 7,
+    "title": "Fetch and CORS",
+    "duration": 3
+  },
+  {
+    "number": 8,
+    "title": "Cancel a Fetch Request",
+    "duration": 3
+  },
+  {
+    "number": 9,
+    "title": "Summary",
+    "duration": 1
+  }
+]

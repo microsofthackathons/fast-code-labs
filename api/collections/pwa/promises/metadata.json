@@ -1,0 +1,27 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 1
+  },
+  {
+    "number": 3,
+    "title": "Promises Basics",
+    "duration": 23
+  },
+  {
+    "number": 4,
+    "title": "async/await",
+    "duration": 4
+  },
+  {
+    "number": 5,
+    "title": "Summary",
+    "duration": 1
+  }
+]

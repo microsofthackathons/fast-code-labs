@@ -28,7 +28,11 @@ import { CodeLabScreen } from './code-lab';
 
 const codeLabTemplate = (): ElementViewTemplate<CodeLabScreen> =>
   html<CodeLabScreen>`
-    <header class="lab-category-${page => page.codeLab?.categories[0].toLowerCase().replace(' ', '')}">
+    <template class="${page =>
+      page.codeLab?.categories.length > 0
+        ? `lab-category-${page.codeLab.categories[0].toLowerCase().replace(' ', '')}`
+        : ''}">
+    <header>
       <div class="lab-nav-back">
         <a href="/code-labs/${page => page.collectionName}" title="Navigate back to collection"
           ><span class="icon icon-back"></span
@@ -106,6 +110,7 @@ const codeLabTemplate = (): ElementViewTemplate<CodeLabScreen> =>
       </div>
       </div>
     </footer>
+    </template>
   `;
 
 export const template = codeLabTemplate();

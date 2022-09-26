@@ -145,48 +145,48 @@ export const styles: ElementStyles = css`
     padding: 0 5px;
   }
 
-  .lab-category {
+  header {
     background-color: #da1a5f;
   }
 
-  .lab-category-javascript {
+  :host(.lab-category-javascript) header {
     background-color: #f1bf22;
     color: #000;
   }
 
-  .lab-category-javascript .icon-back {
+  :host(.lab-category-javascript) header .icon-back {
     ${mixin_svg_logo(arrowLeftIcon, '#000')};
   }
 
-  .lab-category-javascript .icon-timer {
+  :host(.lab-category-javascript) header .icon-timer {
     ${mixin_svg_logo(timerIcon, '#000')};
   }
 
-  .lab-category-html {
+  :host(.lab-category-html) header {
     background-color: #ff5722;
     color: #fafafa;
   }
 
-  .lab-category-html .icon-back,
-  .lab-category-webcomponents .icon-back {
+  :host(.lab-category-html) header .icon-back,
+  :host(.lab-category-webcomponents) header .icon-back {
     ${mixin_svg_logo(arrowLeftIcon, '#fafafa')};
   }
 
-  .lab-category-html .icon-timer,
-  .lab-category-webcomponents .icon-back {
+  :host(.lab-category-html) header .icon-timer,
+  :host(.lab-category-webcomponents) header .icon-back {
     ${mixin_svg_logo(arrowLeftIcon, '#fafafa')};
   }
 
-  .lab-category-css {
+  :host(.lab-category-css) header {
     background: #2062af;
   }
 
-  .lab-category-webcomponents {
+  :host(.lab-category-webcomponents) header {
     background-color: #e44d26;
     color: #fafafa;
   }
 
-  .lab-category-polymer {
+  :host(.lab-category-polymer) header {
     background: #616ca3;
   }
 
@@ -273,9 +273,31 @@ export const styles: ElementStyles = css`
   }
 
   .lab-toc-item.selected {
-    background-color: #e44d26;
-    color: inherit;
+    background-color: #da1a5f;
+    color: #fff;
     font-weight: 600;
+  }
+
+  :host(.lab-category-polymer) .lab-toc-item.selected {
+    background-color: #616ca3;
+  }
+
+  :host(.lab-category-webcomponents) .lab-toc-item.selected {
+    background-color: #e44d26;
+  }
+
+  :host(.lab-category-html) .lab-toc-item.selected {
+    background-color: #ff5722;
+    color: #fafafa;
+  }
+
+  :host(.lab-category-javascript) .lab-toc-item.selected {
+    background-color: #f1bf22;
+    color: #000;
+  }
+
+  :host(.lab-category-css) .lab-toc-item.selected {
+    background-color: #2062af;
   }
 
   .lab-toc-item.completed i,
@@ -283,9 +305,59 @@ export const styles: ElementStyles = css`
   .lab-toc-item.completed i::after,
   .lab-toc-item.selected i,
   .lab-toc-item.selected i:before {
+    border-color: #da1a5f;
+    background-color: #fff;
+    color: #da1a5f;
+  }
+
+  :host(.lab-category-polymer) .lab-toc-item.completed i,
+  :host(.lab-category-polymer) .lab-toc-item.completed i::before,
+  :host(.lab-category-polymer) .lab-toc-item.completed i::after,
+  :host(.lab-category-polymer) .lab-toc-item.selected i,
+  :host(.lab-category-polymer) .lab-toc-item.selected i:before {
+    border-color: #616ca3;
+    background-color: #fff;
+    color: #616ca3;
+  }
+
+  :host(.lab-category-webcomponents) .lab-toc-item.completed i,
+  :host(.lab-category-webcomponents) .lab-toc-item.completed i::before,
+  :host(.lab-category-webcomponents) .lab-toc-item.completed i::after,
+  :host(.lab-category-webcomponents) .lab-toc-item.selected i,
+  :host(.lab-category-webcomponents) .lab-toc-item.selected i:before {
     border-color: #e44d26;
-    background-color: #efefef;
+    background-color: #fafafa;
     color: #e44d26;
+  }
+
+  :host(.lab-category-html) .lab-toc-item.completed i,
+  :host(.lab-category-html) .lab-toc-item.completed i::before,
+  :host(.lab-category-html) .lab-toc-item.completed i::after,
+  :host(.lab-category-html) .lab-toc-item.selected i,
+  :host(.lab-category-html) .lab-toc-item.selected i:before {
+    border-color: #ff5722;
+    background-color: #fafafa;
+    color: #ff5722;
+  }
+
+  :host(.lab-category-javascript) .lab-toc-item.completed i,
+  :host(.lab-category-javascript) .lab-toc-item.completed i::before,
+  :host(.lab-category-javascript) .lab-toc-item.completed i::after,
+  :host(.lab-category-javascript) .lab-toc-item.selected i,
+  :host(.lab-category-javascript) .lab-toc-item.selected i:before {
+    border-color: #f1bf22;
+    background-color: #fafafa;
+    color: #000;
+  }
+
+  :host(.lab-category-css) .lab-toc-item.completed i,
+  :host(.lab-category-css) .lab-toc-item.completed i::before,
+  :host(.lab-category-css) .lab-toc-item.completed i::after,
+  :host(.lab-category-css) .lab-toc-item.selected i,
+  :host(.lab-category-css) .lab-toc-item.selected i:before {
+    border-color: #2062af;
+    background-color: #fafafa;
+    color: #2062af;
   }
 
   .lab-toc-item:first-of-type i::before,
@@ -324,7 +396,7 @@ export const styles: ElementStyles = css`
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
-    background-color: #e44d26;
+    background-color: #da1a5f;
     border-radius: 50%;
     box-sizing: border-box;
     color: #ffffff;
@@ -343,6 +415,30 @@ export const styles: ElementStyles = css`
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     transition: transform 300ms ease-in-out;
+  }
+
+  :host(.lab-category-polymer) .step-nav:not(.step-nav-complete) {
+    background-color: #616ca3;
+  }
+
+  :host(.lab-category-webcomponents) .step-nav:not(.step-nav-complete) {
+    background-color: #e44d26;
+    color: #fafafa;
+  }
+
+  :host(.lab-category-html) .step-nav:not(.step-nav-complete) {
+    background-color: #ff5722;
+    color: #fafafa;
+  }
+
+  :host(.lab-category-javascript) .step-nav:not(.step-nav-complete) {
+    background-color: #f1bf22;
+    color: #000;
+  }
+
+  :host(.lab-category-css) .step-nav:not(.step-nav-complete) {
+    background-color: #2062af;
+    color: #fafafa;
   }
 
   .step-nav-complete {

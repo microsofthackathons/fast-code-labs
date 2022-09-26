@@ -1,0 +1,37 @@
+[
+  {
+    "number": 1,
+    "title": "Overview",
+    "duration": 0
+  },
+  {
+    "number": 2,
+    "title": "Installation",
+    "duration": 5
+  },
+  {
+    "number": 3,
+    "title": "Hello Task",
+    "duration": 5
+  },
+  {
+    "number": 4,
+    "title": "Code Analysis",
+    "duration": 30
+  },
+  {
+    "number": 5,
+    "title": "HTML Injection",
+    "duration": 25
+  },
+  {
+    "number": 6,
+    "title": "Live reload",
+    "duration": 25
+  },
+  {
+    "number": 7,
+    "title": "Build",
+    "duration": 30
+  }
+]

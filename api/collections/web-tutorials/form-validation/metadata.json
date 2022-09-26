@@ -1,0 +1,37 @@
+[
+  {
+    "number": 1,
+    "title": "Overview",
+    "duration": 0
+  },
+  {
+    "number": 2,
+    "title": "Project Set Up",
+    "duration": 2
+  },
+  {
+    "number": 3,
+    "title": "Application Set Up",
+    "duration": 8
+  },
+  {
+    "number": 4,
+    "title": "Form Creation",
+    "duration": 15
+  },
+  {
+    "number": 5,
+    "title": "Error messages",
+    "duration": 35
+  },
+  {
+    "number": 6,
+    "title": "Custom validation",
+    "duration": 15
+  },
+  {
+    "number": 7,
+    "title": "Async validation",
+    "duration": 15
+  }
+]

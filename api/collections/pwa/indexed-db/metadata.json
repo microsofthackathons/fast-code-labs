@@ -1,0 +1,47 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 1
+  },
+  {
+    "number": 3,
+    "title": "IndexedDB terms",
+    "duration": 3
+  },
+  {
+    "number": 4,
+    "title": "Create an IndexedDB Database",
+    "duration": 3
+  },
+  {
+    "number": 5,
+    "title": "Create an Object Store",
+    "duration": 4
+  },
+  {
+    "number": 6,
+    "title": "Adding items to the database",
+    "duration": 4
+  },
+  {
+    "number": 7,
+    "title": "Get items from the database",
+    "duration": 10
+  },
+  {
+    "number": 8,
+    "title": "Deleting from IndexedDB",
+    "duration": 3
+  },
+  {
+    "number": 9,
+    "title": "Summary",
+    "duration": 1
+  }
+]

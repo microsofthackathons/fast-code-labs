@@ -1,0 +1,32 @@
+[
+  {
+    "number": 1,
+    "title": "Overview",
+    "duration": 0
+  },
+  {
+    "number": 2,
+    "title": "HTML",
+    "duration": 20
+  },
+  {
+    "number": 3,
+    "title": "CSS",
+    "duration": 30
+  },
+  {
+    "number": 4,
+    "title": "Classes and Layout",
+    "duration": 30
+  },
+  {
+    "number": 5,
+    "title": "Images",
+    "duration": 20
+  },
+  {
+    "number": 6,
+    "title": "Fonts and Forms",
+    "duration": 20
+  }
+]

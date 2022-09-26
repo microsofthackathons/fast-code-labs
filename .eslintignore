@@ -6,6 +6,7 @@ playwright.*.ts
 
 # Never lint node_modules
 node_modules
+api
 
 # Never lint build output
 dist

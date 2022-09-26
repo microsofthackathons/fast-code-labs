@@ -1,0 +1,42 @@
+[
+  {
+    "number": 1,
+    "title": "Overview",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Project set up",
+    "duration": 12
+  },
+  {
+    "number": 3,
+    "title": "Showing a map",
+    "duration": 8
+  },
+  {
+    "number": 4,
+    "title": "Using geolocation",
+    "duration": 8
+  },
+  {
+    "number": 5,
+    "title": "Adding ATMs",
+    "duration": 8
+  },
+  {
+    "number": 6,
+    "title": "Showing directions",
+    "duration": 8
+  },
+  {
+    "number": 7,
+    "title": "Switching travel mode",
+    "duration": 14
+  },
+  {
+    "number": 8,
+    "title": "Summary",
+    "duration": 1
+  }
+]
