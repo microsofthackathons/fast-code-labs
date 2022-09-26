@@ -104,7 +104,7 @@ module.exports = {
     'guard-for-in': ['error'],
     'no-return-await': ['error'],
 
-    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+    // 'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
     'padded-blocks': 'off',
     quotes: [2, 'single', { avoidEscape: true }],
   },

@@ -1,0 +1,184 @@
+                <aside class="callout">
+                  <p>
+                    <strong>Lit-HTML</strong> has 4 main goals:
+                    <ol>
+                      <li>Efficient updates of previously rendered DOM.</li>
+                      <li>Expressiveness and easy access to the JavaScript state that needs to be injected into DOM.</li>
+                      <li>Standard JavaScript without required build steps, understandable by standards-compliant tools.</li>
+                      <li>Very small size.</li>
+                    </ol>
+                  </p>
+                </aside>
+
+                <h2><strong>How it works</strong></h2>
+
+                <p>
+                    <code>lit-html</code> utilizes some unique properties of HTML <code>&lt;template&gt;</code> elements and JavaScript template literals. So it's helpful to understand them first.
+                </p>
+                   <h3>Tagged Template Literals</h3>
+                <p>
+                    A JavaScript template literal is a string literal that can have other JavaScript expressions embedded in it:
+                </p>
+               <code>
+                   `My name is ${name}.`
+               </code>
+                <p>A tagged template literal is prefixed with a special template tag function:</p>
+              <code>
+                  let name = 'Monica';
+                  tag`My name is ${name}.`
+              </code>
+
+                <p>
+                    Tags are functions of the: <code>tag(strings, ...values)</code>, and <code>strings</code> is an immutable array of the literal parts, and values are the results of the embedded expressions.
+                    In the preceding example, <code>strings</code> would be <code>['My name is ', '.']</code>, and values would be <code>['Monica']</code>.
+                </p>
+
+                <pre>
+<code>
+&lt;template id="mytemplate"&gt;
+    &lt;img src="" alt="great image"&gt;
+    &lt;div class="comment"&gt;&lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+
+                <h2><strong>HTML<code>&lt;template&gt;</code> Elements</strong></h2>
+
+                <p>
+                    A <code>&lt;template&gt;</code> element is an inert tree of DOM (script don't run, images don't load,
+                    custom elements aren't upgraded, etc) that can be efficiently cloned. It's usually used to tell the
+                    HTML parser that a section of the document must not be instantiated when parsed,
+                    but by code at a later time, but it can also be created imperatively with <code>createElement</code> and <code>innerHTML</code>.
+                </p>
+
+                <h3>Template Creation</h3>
+
+                <p>
+                    The first time <code>html</code> is called on a particular template literal
+                    it does one-time setup work to create the template. It joins all the string parts
+                    with a special placeholder, <code>"[[_twoWayBinding('')]]"</code>, then creates a <code>&lt;template&gt;</code>
+                    and sets its <code>innerHTML</code> to the result. Then it walks the template's DOM and
+                    extracts the placeholder and remembers their location.
+                </p>
+                <p>
+                    Every call to <code>html</code> returns a <code>TemplateResult</code> which contains
+                    the template created on the first call, and the expression values for the current call.
+                </p>
+
+                <h3>Template rendering</h3>
+
+                <p>
+                    <code>render()</code> takes a <code>TemplateResult</code> and renders it to a DOM container.
+                    On the initial render it clones the template, then walks it using the remembered placeholder positions, to create <code>Part</code>s.
+                </p>
+                <p>
+                    A<code>Part</code> is a "hole" in the DOM where values can be injected.
+                    <code>lit-html</code> includes two type of parts by default: <code>NodePart</code> and <code>AttributePart</code>,
+                    which let you set text content and attribute values respectively.
+                    The <code>Part</code>s, container, and template they were created from are
+                    grouped together in an object called a <code>TemplateInstance</code>.
+                </p>
+                <p>
+                    Rendering can be customized by providing alternate <code>render()</code>
+                    implementations which create different kinds of <code>TemplateInstances</code> and <code>Part</code>s,
+                    like <code>PropertyPart</code> and <code>EventPart</code> included in <code>lib/lit-extended.ts</code> which
+                    let templates set properties and event handlers on elements.
+                </p>
+                <h2>What are we creating</h2>
+
+                <p>
+                    We are going to make a simple card webcomponent. It should have a header,
+                    body and a footer. Let's start with the header. It should be a template with a slot.
+               </p>
+         <pre>
+<code>
+class SimpleCard extends Bbconf2017LitElement {
+
+  get headerTemplate() {
+    return html`
+      &lt;header id="header"&gt;
+        &lt;slot name="header" id="headerslot"&gt;&lt;/slot&gt;
+      &lt;/header&gt;
+  `}
+  connectedCallback() {
+    console.log('simple-card element added to the DOM!');
+  }
+}
+
+// Register custom element definition using standard platform API
+customElements.define('simple-card', SimpleCard);
+</code></pre>
+              <p>
+                Let's also create a body and footer template in the same way.
+              </p>
+              <pre>
+<code>
+class SimpleCard extends Bbconf2017LitElement {
+
+  get headerTemplate() {
+    return html`
+      &lt;header id="header"&gt;
+        &lt;slot name="header" id="headerslot"&gt;&lt;/slot&gt;
+      &lt;/header&gt;
+  `;
+  }
+  get bodyTemplate() {
+    return html`
+      &lt;div id="body"&gt;
+        &lt;slot id="bodyslot"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+  `;
+  }
+  get footerTemplate() {
+    return html`
+      &lt;footer id="footer"&gt;
+        &lt;slot name="footer" id="footerslot"&gt;&lt;/slot&gt;
+      &lt;/footer&gt;
+  `;
+  }
+}
+
+// Register custom element definition using standard platform API
+customElements.define('simple-card', SimpleCard);
+</code></pre>
+              <h3>Show it in the component</h3>
+
+              <p>
+                We want to see if our templates work. Let's put some content in the card.
+              </p>
+              <pre>
+<code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,minimum-scale=1.0"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title>Simple-card-component&lt;/title&gt;
+        &lt;link rel="import" href="../simple-card.html">
+
+        &lt;style&gt;
+          body {
+            width: 90%;
+            max-width: 980px;
+            background-color: #f5f5f5;
+            margin: 0 auto 32px;
+          }
+        &lt;/style&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Example page of the simple-card&lt;/h1&gt;
+      &lt;h2&gt;An basic example&lt;/h2&gt;
+
+      &lt;simple-card&gt;
+       &lt;h3 slot="header"&gt;Title&lt;/h3&gt;
+        &lt;div&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius quam quam.
+        &lt;/div&gt;
+        &lt;div slot="footer"&gt;Footer&lt;/div&gt;
+      &lt;/simple-card&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+            </google-codelab-step>

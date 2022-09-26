@@ -1,0 +1,41 @@
+                <h2>Adding litHTML</h2>
+
+                <p>
+                    <a href="https://github.com/PolymerLabs/lit-html"
+                       target="_blank">Lit-HTML</a>
+                    lets you write HTML templates with JavaScript template literals, and efficiently render and re-render those templates to DOM.
+                    lit-html provides two main exports:
+                    <ul>
+                        <li>html: A JavaScript template tag used to produce a TemplateResult, which is a container for a template, and the values that should populate the template.</li>
+                        <li>render(): A function that renders a TemplateResult to a DOM container, such as an element or shadow root.</li>
+                    </ul>
+                    We prepared a Lit-HTML component that we can use.
+                <pre>
+<code>
+class SimpleCard extends Bbconf2017LitElement {
+
+
+  connectedCallback() {
+    console.log('simple-card element added to the DOM!');
+  }
+}
+
+// Register custom element definition using standard platform API
+customElements.define('simple-card', SimpleCard);
+</code></pre>
+                <h3>bower.json</h3>
+                <p>
+                  Now that we use the Bbconf-lit-Element to extend we have to set this element as
+                  a dependency. Let's create a bower.json containing it.
+                </p>
+
+                <pre>
+<code>
+{
+  "name": "simple-card",
+  "main": "simple-card.html",
+  "dependencies": {
+    "bbconf2017-lithtml": "https://github.com/The-Guide/bbconf2017-lithtml.git"
+  }
+}
+</code></pre>

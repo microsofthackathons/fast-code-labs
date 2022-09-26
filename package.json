@@ -33,6 +33,7 @@
     "@microsoft/fast-foundation": "^3.0.0-alpha.9",
     "@microsoft/fast-router": "^1.0.0-alpha.6",
     "blank": "^0.1.22",
+    "code-prettify": "^0.1.0",
     "undefined": "^0.1.0"
   },
   "devDependencies": {

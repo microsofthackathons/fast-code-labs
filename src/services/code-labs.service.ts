@@ -1,4 +1,8 @@
 import { inject } from '@microsoft/fast-element/di';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import '../../node_modules/code-prettify/src/prettify.js';
 import { Http } from '../utils';
 
 export interface Collection {
@@ -25,6 +29,9 @@ export interface CodeLabStep {
   duration: number;
 }
 
+const encodeHTMLEntities_ = (htmlStr: string) =>
+  htmlStr.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 export class CodeLabsService {
   constructor(@inject(Http) private http: Http) {}
 
@@ -41,5 +48,29 @@ export class CodeLabsService {
   async getCodeLabSteps(collectionName: string, labName: string): Promise<CodeLabStep[]> {
     const response = await this.http.get<CodeLabStep[]>(`collections/${collectionName}/${labName}/metadata`);
     return response;
+  }
+
+  async getCodeLabStepContent(collectionName: string, labName: string, stepNumber: number): Promise<string> {
+    const response = await fetch(`/api/collections/${collectionName}/${labName}/steps/${stepNumber}.html`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/html',
+      },
+    });
+
+    const stepContent = await response.text();
+    const parser = new DOMParser();
+    const html = parser.parseFromString(stepContent, 'text/html');
+
+    const blocks = html.querySelectorAll('pre > code');
+
+    blocks.forEach(block => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      block.innerHTML = PR.prettyPrintOne(encodeHTMLEntities_(block.textContent));
+    });
+    // console.log(html.body.innerHTML);
+
+    return html.body.innerHTML;
   }
 }
