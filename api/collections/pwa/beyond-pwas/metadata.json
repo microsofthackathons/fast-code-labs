@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 3
+  },
+  {
+    "number": 3,
+    "title": "Camera & Microphone",
+    "duration": 15
+  },
+  {
+    "number": 4,
+    "title": "Geolocation",
+    "duration": 15
+  },
+  {
+    "number": 5,
+    "title": "Web Streams API",
+    "duration": 5
+  },
+  {
+    "number": 6,
+    "title": "Web Bluetooth API",
+    "duration": 5
+  },
+  {
+    "number": 7,
+    "title": "Web Share API",
+    "duration": 5
+  },
+  {
+    "number": 8,
+    "title": "Payment Request API",
+    "duration": 5
+  },
+  {
+    "number": 9,
+    "title": "Shape Detection API",
+    "duration": 1
+  },
+  {
+    "number": 10,
+    "title": "Summary",
+    "duration": 1
+  }
+]

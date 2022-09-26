@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 2
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 3
+  },
+  {
+    "number": 3,
+    "title": "User Permissions",
+    "duration": 5
+  },
+  {
+    "number": 4,
+    "title": "Displaying a Notification",
+    "duration": 9
+  },
+  {
+    "number": 5,
+    "title": "Interacting with notifications",
+    "duration": 4
+  },
+  {
+    "number": 6,
+    "title": "Subscribing to notifications",
+    "duration": 10
+  },
+  {
+    "number": 7,
+    "title": "Receiving notifications",
+    "duration": 10
+  },
+  {
+    "number": 8,
+    "title": "Unsubscribe from notifications",
+    "duration": 15
+  },
+  {
+    "number": 9,
+    "title": "Third-party push notifications",
+    "duration": 1
+  },
+  {
+    "number": 10,
+    "title": "Summary",
+    "duration": 1
+  }
+]

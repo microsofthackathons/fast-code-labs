@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 3
+  },
+  {
+    "number": 3,
+    "title": "Create a basic service worker",
+    "duration": 3
+  },
+  {
+    "number": 4,
+    "title": "Configure Workbox",
+    "duration": 5
+  },
+  {
+    "number": 5,
+    "title": "Inject a manifest into the service worker",
+    "duration": 5
+  },
+  {
+    "number": 6,
+    "title": "Reinject an updated manifest",
+    "duration": 4
+  },
+  {
+    "number": 7,
+    "title": "Add routes to the service worker",
+    "duration": 3
+  },
+  {
+    "number": 8,
+    "title": "Dynamic Caching and Offline HTML Fallback",
+    "duration": 5
+  },
+  {
+    "number": 9,
+    "title": "Summary",
+    "duration": 1
+  }
+]

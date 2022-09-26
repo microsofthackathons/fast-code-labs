@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "number": 1,
+    "title": "Introduction",
+    "duration": 1
+  },
+  {
+    "number": 2,
+    "title": "Getting set up",
+    "duration": 3
+  },
+  {
+    "number": 3,
+    "title": "Taking and displaying selfies",
+    "duration": 19
+  },
+  {
+    "number": 4,
+    "title": "Browsing selfies offline",
+    "duration": 14
+  },
+  {
+    "number": 5,
+    "title": "Taking selfies offline",
+    "duration": 10
+  },
+  {
+    "number": 6,
+    "title": "Periodic synchronization",
+    "duration": 2
+  },
+  {
+    "number": 7,
+    "title": "Summary",
+    "duration": 1
+  }
+]
